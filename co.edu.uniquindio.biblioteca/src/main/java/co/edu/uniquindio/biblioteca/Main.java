@@ -4,7 +4,7 @@ import co.edu.uniquindio.biblioteca.model.Libro;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println();
+        crearLibros();
     }
     private static void crearLibros(){
 
@@ -17,7 +17,7 @@ public class Main {
         Libro libro4 = new Libro();
         Libro libro5 = new Libro();
 
-        libro1.setTitulo("Calculo para principiantes");
+        libro1.setTitulo(" Calculo para principiantes");
         libro1.setGenero("Estudio");
         libro1.setAutor("Viviana Franco");
         libro1.setCapitulos(10);
@@ -25,7 +25,7 @@ public class Main {
         libro1.setEditorial("Santana");
         libro1.setNumeroPaginas(760);
 
-        libro2.setTitulo("Cenicienta");
+        libro2.setTitulo(" Cenicienta");
         libro2.setGenero("Narrativo");
         libro2.setAutor("Charles Perrault");
         libro2.setCapitulos(1);
@@ -33,7 +33,7 @@ public class Main {
         libro2.setEditorial("Luarna");
         libro2.setNumeroPaginas(240);
 
-        libro3.setTitulo("Padre rico Padre pobre");
+        libro3.setTitulo(" Padre rico Padre pobre");
         libro3.setGenero("Narrativo");
         libro3.setAutor("Robert T Kiyosaki");
         libro3.setCapitulos(9);
@@ -41,7 +41,7 @@ public class Main {
         libro3.setEditorial("Epublibre");
         libro3.setNumeroPaginas(678);
 
-        libro4.setTitulo("It");
+        libro4.setTitulo(" It");
         libro4.setGenero("Terror");
         libro4.setAutor("Stephen King");
         libro4.setCapitulos(11);
@@ -49,7 +49,7 @@ public class Main {
         libro4.setEditorial("Signet books");
         libro4.setNumeroPaginas(1504);
 
-        libro5.setTitulo("Cuentos de Edgar Allan Poe");
+        libro5.setTitulo(" Cuentos de Edgar Allan Poe");
         libro5.setGenero("Ficcion y Literatura");
         libro5.setAutor("Edgar Allan Poe");
         libro5.setCapitulos(4);
@@ -58,28 +58,32 @@ public class Main {
         libro5.setNumeroPaginas(192);
 
         if (libro1.getGenero().equalsIgnoreCase(genero)){
-            cantidadGenero = cantidadGenero + 1;
+            cantidadGenero = cantidadGenero+1;
         }
         if (libro2.getGenero().equalsIgnoreCase(genero)){
-            cantidadGenero = cantidadGenero + 1;
+            cantidadGenero = cantidadGenero+1;
         }
         if (libro3.getGenero().equalsIgnoreCase(genero)){
-            cantidadGenero = cantidadGenero + 1;
+            cantidadGenero = cantidadGenero+1;
         }
         if (libro4.getGenero().equalsIgnoreCase(genero)){
-            cantidadGenero = cantidadGenero + 1;
+            cantidadGenero = cantidadGenero+1;
         }
         if (libro5.getGenero().equalsIgnoreCase(genero)){
-            cantidadGenero = cantidadGenero + 1;
+            cantidadGenero = cantidadGenero+1;
         }
 
-        System.out.println("Hay" + cantidadGenero + "Libros del genero: " +genero);
+        System.out.println("Hay " +  cantidadGenero  + " Libros del genero: " +genero);
 
+        System.out.println("Nombre del libro 1" + libro1.getTitulo());
         System.out.println("Nombre del libro 2" + libro2.getTitulo());
+        System.out.println("Nombre del libro 3" + libro3.getTitulo());
+        System.out.println("Nombre del libro 4" + libro4.getTitulo());
+        System.out.println("Nombre del libro 5" + libro5.getTitulo());
 
-        libro2.setTitulo("Calculo Integral y Diferencial");
+        libro1.setTitulo("Calculo Integral y Diferencial");
 
-        System.out.println("Nuevo nombre del libro 2: " +libro2.setTitulo(););
+        System.out.println("Nuevo nombre del libro 1: " +libro1.getTitulo());
 
     }
 
