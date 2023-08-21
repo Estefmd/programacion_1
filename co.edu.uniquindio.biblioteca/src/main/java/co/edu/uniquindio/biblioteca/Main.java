@@ -73,7 +73,14 @@ public class Main {
             cantidadGenero = cantidadGenero + 1;
         }
 
-        
+        System.out.println("Hay" + cantidadGenero + "Libros del genero: " +genero);
+
+        System.out.println("Nombre del libro 2" + libro2.getTitulo());
+
+        libro2.setTitulo("Calculo Integral y Diferencial");
+
+        System.out.println("Nuevo nombre del libro 2: " +libro2.setTitulo(););
+
     }
 
 }
