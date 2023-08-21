@@ -8,10 +8,15 @@ public class Main {
     }
     private static void crearLibros(){
 
-        String GENERO = "terror";
+        String genero = "Terror";
         int cantidadGenero = 0;
 
         Libro libro1 = new Libro();
+        Libro libro2 = new Libro();
+        Libro libro3 = new Libro();
+        Libro libro4 = new Libro();
+        Libro libro5 = new Libro();
+
         libro1.setTitulo("Calculo para principiantes");
         libro1.setGenero("Estudio");
         libro1.setAutor("Viviana Franco");
@@ -20,7 +25,6 @@ public class Main {
         libro1.setEditorial("Santana");
         libro1.setNumeroPaginas(760);
 
-        Libro libro2 = new Libro();
         libro2.setTitulo("Cenicienta");
         libro2.setGenero("Narrativo");
         libro2.setAutor("Charles Perrault");
@@ -29,7 +33,6 @@ public class Main {
         libro2.setEditorial("Luarna");
         libro2.setNumeroPaginas(240);
 
-        Libro libro3 = new Libro();
         libro3.setTitulo("Padre rico Padre pobre");
         libro3.setGenero("Narrativo");
         libro3.setAutor("Robert T Kiyosaki");
@@ -38,7 +41,6 @@ public class Main {
         libro3.setEditorial("Epublibre");
         libro3.setNumeroPaginas(678);
 
-        Libro libro4 = new Libro();
         libro4.setTitulo("It");
         libro4.setGenero("Terror");
         libro4.setAutor("Stephen King");
@@ -47,7 +49,6 @@ public class Main {
         libro4.setEditorial("Signet books");
         libro4.setNumeroPaginas(1504);
 
-        Libro libro5 = new Libro();
         libro5.setTitulo("Cuentos de Edgar Allan Poe");
         libro5.setGenero("Ficcion y Literatura");
         libro5.setAutor("Edgar Allan Poe");
@@ -56,6 +57,23 @@ public class Main {
         libro5.setEditorial("Austral cuentos");
         libro5.setNumeroPaginas(192);
 
+        if (libro1.getGenero().equalsIgnoreCase(genero)){
+            cantidadGenero = cantidadGenero + 1;
+        }
+        if (libro2.getGenero().equalsIgnoreCase(genero)){
+            cantidadGenero = cantidadGenero + 1;
+        }
+        if (libro3.getGenero().equalsIgnoreCase(genero)){
+            cantidadGenero = cantidadGenero + 1;
+        }
+        if (libro4.getGenero().equalsIgnoreCase(genero)){
+            cantidadGenero = cantidadGenero + 1;
+        }
+        if (libro5.getGenero().equalsIgnoreCase(genero)){
+            cantidadGenero = cantidadGenero + 1;
+        }
+
+        
     }
 
 }
