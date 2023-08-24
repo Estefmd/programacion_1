@@ -8,16 +8,13 @@ public class Main {
     }
     private static void crearLibros(){
 
-        String genero = "Terror";
-        int cantidadGenero = 0;
-
         Libro libro1 = new Libro();
         Libro libro2 = new Libro();
         Libro libro3 = new Libro();
         Libro libro4 = new Libro();
         Libro libro5 = new Libro();
 
-        libro1.setTitulo(" Calculo para principiantes");
+        libro1.setTitulo(" Calculo integral");
         libro1.setGenero("Estudio");
         libro1.setAutor("Viviana Franco");
         libro1.setCapitulos(10);
@@ -57,23 +54,62 @@ public class Main {
         libro5.setEditorial("Austral cuentos");
         libro5.setNumeroPaginas(192);
 
-        if (libro1.getGenero().equalsIgnoreCase(genero)){
-            cantidadGenero = cantidadGenero+1;
-        }
-        if (libro2.getGenero().equalsIgnoreCase(genero)){
-            cantidadGenero = cantidadGenero+1;
-        }
-        if (libro3.getGenero().equalsIgnoreCase(genero)){
-            cantidadGenero = cantidadGenero+1;
-        }
-        if (libro4.getGenero().equalsIgnoreCase(genero)){
-            cantidadGenero = cantidadGenero+1;
-        }
-        if (libro5.getGenero().equalsIgnoreCase(genero)){
-            cantidadGenero = cantidadGenero+1;
-        }
+        //Obtener la cantidad de libros donde el libro empiece por una vocal y consonante
 
-        System.out.println("Hay " +  cantidadGenero  + " Libros del genero: " +genero);
+        int contarVocal = 0;
+        int contarConsonante = 0;
+
+        if(esVocal(libro1.getTitulo().charAt(0))) {
+            contarVocal = contarVocal + 1;
+        }else{
+            contarConsonante = contarConsonante +1;
+        }
+        if(esVocal(libro2.getTitulo().charAt(0))) {
+            contarVocal = contarVocal + 1;
+        }else{
+            contarConsonante = contarConsonante +1;
+        }
+        if(esVocal(libro3.getTitulo().charAt(0))) {
+            contarVocal = contarVocal + 1;
+        }else{
+            contarConsonante = contarConsonante +1;
+        }
+        if(esVocal(libro4.getTitulo().charAt(0))) {
+            contarVocal = contarVocal + 1;
+        }else{
+            contarConsonante = contarConsonante +1;
+        }
+        if(esVocal(libro5.getTitulo().charAt(0))) {
+            contarVocal = contarVocal + 1;
+        }else{
+            contarConsonante = contarConsonante +1;
+        }
+        System.out.println("Los Libros que empiezan con vocales son: " + contarVocal +
+                " y Los Libros que empiezan con consonantes son: " +contarConsonante) ;
+
+        //Obtener la cantidad de Libros con el genero Terror
+
+        String genero = "Terror";
+        int cantidadGenero = 0;
+
+        if(libro1.getGenero().equalsIgnoreCase(genero)){
+            cantidadGenero = cantidadGenero+1;
+        }
+        if(libro2.getGenero().equalsIgnoreCase(genero)){
+            cantidadGenero = cantidadGenero+1;
+        }
+        if(libro3.getGenero().equalsIgnoreCase(genero)){
+            cantidadGenero = cantidadGenero+1;
+        }
+        if(libro4.getGenero().equalsIgnoreCase(genero)){
+            cantidadGenero = cantidadGenero+1;
+        }
+        if(libro5.getGenero().equalsIgnoreCase(genero)){
+            cantidadGenero = cantidadGenero+1;
+        }
+        System.out.println("Hay " +  cantidadGenero  + " Libro del genero: " +genero);
+
+        //Modificar nombre de Libro Calculo integral por Calculo integral y Diferencial
 
         System.out.println("Nombre del libro 1" + libro1.getTitulo());
         System.out.println("Nombre del libro 2" + libro2.getTitulo());
@@ -84,6 +120,18 @@ public class Main {
         libro1.setTitulo("Calculo Integral y Diferencial");
 
         System.out.println("Nuevo nombre del libro 1: " +libro1.getTitulo());
+
+    }
+
+    public static boolean esVocal(char vocal){
+        boolean vocales = false;
+                vocal = Character.toLowerCase(vocal);
+
+                if(vocal=='a' || vocal=='e' || vocal=='i' || vocal=='o' || vocal=='u'){
+
+                    vocales = true;
+                }
+                return vocales;
 
     }
 
