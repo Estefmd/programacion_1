@@ -109,6 +109,27 @@ public class Main {
         }
         System.out.println("Hay " +  cantidadGenero  + " Libro del genero: " +genero);
 
+        //Libros que tengan paginas mayores a 120
+
+        int numeroPaginas = 120;
+        int cantidadLibros = 0;
+
+        if(libro1.getNumeroPaginas() > numeroPaginas){
+           cantidadLibros = cantidadLibros +1;
+        }
+        if(libro2.getNumeroPaginas() > numeroPaginas){
+            cantidadLibros = cantidadLibros +1;
+        }
+        if(libro3.getNumeroPaginas() > numeroPaginas){
+            cantidadLibros = cantidadLibros +1;
+        }
+        if(libro4.getNumeroPaginas() > numeroPaginas){
+            cantidadLibros = cantidadLibros +1;
+        }
+        if(libro5.getNumeroPaginas() > numeroPaginas){
+            cantidadLibros = cantidadLibros +1;
+        }
+
         //Modificar nombre de Libro Calculo integral por Calculo integral y Diferencial
 
         System.out.println("Nombre del libro 1" + libro1.getTitulo());
